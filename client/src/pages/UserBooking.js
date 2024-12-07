@@ -72,7 +72,6 @@ function UserBookings() {
   
     // Table
     const tableColumn = ["Car", "Rate (per hr)", "Duration", "Total"];
-    const driverFee = booking.driverRequired ? booking.totalMins * 5 : 0;
     const ratePerHour = booking.car.rentPerHour
   
     const tableRows = [

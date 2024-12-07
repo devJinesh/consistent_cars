@@ -163,7 +163,7 @@ function BookingCar() {
                   <span className="car-data2">{car.name}</span>
                 </p>
                 <p>
-                  <span className="car-data2">{car.rentPerHour} Rs/-</span>
+                  <span className="car-data2">{car.rentPerHour} Rs/- per hour</span>
                 </p>
                 <p>
                   <span className="car-data2">{car.fuelType}</span>

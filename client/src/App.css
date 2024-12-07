@@ -1,0 +1,198 @@
+.App {
+  text-align: center;
+}
+* {
+  cursor: url("./crs.cur"), auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #00ffffdf);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #01bf86);
+  border-radius: 6px;
+}
+
+.wf-cell.shown {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.the7-icon-box-grid-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+
+.the7-icon-box-grid {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.box-heading span {
+  color: cyan;
+}
+
+.box-description {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.wf-cell.shown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wf-cell.shown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  width: 100%;
+  margin-top: 125px;
+}
+
+.about-us-section h1 {
+  font-size: 27px;
+  color: cyan;
+  margin-bottom: 20px;
+}
+.about-us-section h2 {
+  font-size: 24px;
+  color: cyan;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.about-us-section h3 {
+  font-size: 21px;
+  color: cyan;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.about-us-section p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.the7-icon-box-grid-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+
+.the7-icon-box-grid {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.box-heading span {
+  color: cyan;
+}
+
+.box-description {
+  font-size: 14px;
+  color: #fff;
+}
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  width: 100%;
+  margin-top: 125px;
+}
+
+.services-section h2 {
+  font-size: 24px;
+  color: cyan;
+  margin-bottom: 20px;
+}
+
+.services-section p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.car {
+  transition: transform 0.3s;
+}
+
+.car:hover {
+  transform: scale(1.05);
+}
+
+.box-shadow2 {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carimg {
+  height: 150px; /* Set a fixed height for uniformity */
+  object-fit: cover;
+}

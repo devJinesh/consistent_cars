@@ -8,7 +8,6 @@ exports.bookCar = async (req, res) => {
   const { paymentId } = req.body; // This may need to be adjusted based on your frontend
   try {
     // You can include any initial logic here if needed
-
     const transactionId = paymentId; // Assuming paymentId is the Razorpay payment ID
     const newBooking = new Booking({
       ...req.body,
@@ -33,7 +32,7 @@ exports.paymentVerification = async (req, res) => {
 
   const body = razorpay_order_id + "|" + razorpay_payment_id;
 
-  const expectedSignature = crypto.createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+  const expectedSignature = crypto.createHmac('sha256', "ZXmCCu3IXbma80itzudgw0iE") //razorpay secret
                                    .update(body.toString())
                                    .digest('hex');
 

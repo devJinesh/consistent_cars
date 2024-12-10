@@ -61,7 +61,7 @@ function BookingCar() {
 
   function handlePayment() {
     const options = {
-      key: "rzp_test_56IzHtmnOD1ODK", // Replace with your Razorpay key
+      key: "rzp_live_0e95CHFRJ2E9Kp", // Replace with your Razorpay key
       amount: totalAmount * 100, // Amount in paise
       currency: "INR",
       name: "Consistent Cars",

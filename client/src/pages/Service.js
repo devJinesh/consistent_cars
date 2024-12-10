@@ -47,6 +47,10 @@ function Service() {
         <p style={{ width: "60%", textAlign: "center", fontSize: "20px" }}>
           Check out the stellar services and benefits that we provide here at Consistent Cars!
         </p>
+        <p style={{ width: "60%", textAlign: "center", fontSize: "20px" }}>
+        We can take you to all the best places to visit in the beautiful city of Pune,
+        make sure you reach the Pune Airport comfortably on time before your flight and more!
+        </p>
       </div>
   
       <Row justify="center" gutter={16}>
@@ -65,7 +69,7 @@ function Service() {
                 <div className="text-left pl-2">
                   <p>{service.name}</p>
                   <p style={{ fontSize: "12px", color: "red" }}>
-                    {service.name === "Airport Drop" ? "*Min 12 hrs of booking required." : "*Daily limit: 250 km; ₹20/km beyond this."}
+                    {service.name === "Airport Drop" ? "*Min 12 hrs of booking required." : "*Daily limit 250 kms."}
                   </p>
                 </div>
               </div>
@@ -100,13 +104,37 @@ function Service() {
                         <p style={{ color: "#222f35" }}>
                           Rs{car.rentPerHour} Per Hour /-
                         </p>
+                        <p style={{ fontSize: "12px", color: "red" }}>
+                          {(() => {
+                            switch (car.name) {
+                              case "Toyota Innova":
+                                return "*Rs 20 per km beyond daily limit.";
+                              case "Toyota Etios":
+                                return "*Rs 12 per km beyond daily limit.";
+                              case "Swift DZire":
+                                return "*Rs 10 per km beyond daily limit.";
+                              default:
+                                return "";
+                            }
+                          })()}
+                        </p>
                       </div>
                       <div>
-                        <button className="btn1 mr-2">
+                      <button 
+                        className="btn1 mr-2" 
+                        style={{
+                          padding: "8px 8px",
+                          fontSize: "14px",
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                        }}
+                      >
                           <Link to={`/booking/${car._id}`}> Book Now</Link>
                         </button>
                       </div>
                     </div>
+
                   </div>
                 </Link>
               </Col>

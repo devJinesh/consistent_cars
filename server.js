@@ -30,15 +30,6 @@ app.use("/api/users/", require("./Routes/usersRoutes"));
 app.use("/booking/api/bookings/", require("./Routes/bookingsRoute"));
 app.use("/api/bookings/", require("./Routes/bookingsRoute"));
 
-// Production setup
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-  });
-}
-
 // Start server
 const port = process.env.PORT || 8000;
 app.listen(port, () => {

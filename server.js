@@ -17,15 +17,16 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 }));
 
-// Routes
+// API Routes
 app.use("/api/cars/", require("./Routes/carsRoutes"));
 app.use("/api/users/", require("./Routes/usersRoutes"));
 app.use("/api/bookings/", require("./Routes/bookingsRoute"));
 
 // Production setup
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static(path.join(__dirname, "client/build")));
 
+  // Catch-all handler for any request that doesn't match an API route
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });

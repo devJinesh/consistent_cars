@@ -29,7 +29,6 @@ app.use("/editcar/api/cars/", require("./Routes/carsRoutes"));
 app.use("/api/users/", require("./Routes/usersRoutes"));
 app.use("/booking/api/bookings/", require("./Routes/bookingsRoute"));
 app.use("/api/bookings/", require("./Routes/bookingsRoute"));
-app.use("/api/bookings/", require("./Routes/bookServicesRoute"));
 
 // Production setup
 if (process.env.NODE_ENV === "production") {

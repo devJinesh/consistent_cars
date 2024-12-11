@@ -8,10 +8,6 @@ const app = express();
 
 // Database connection
 const dbConnection = require("./Db/db");
-dbConnection.on('error', console.error.bind(console, 'MongoDB connection error:'));
-dbConnection.once('open', () => {
-  console.log('Database connected');
-});
 
 // Middleware
 app.use(express.json());

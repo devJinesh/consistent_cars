@@ -9,14 +9,14 @@ function DefaultLayout(props) {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a href="/">Home</a>
+      <Link to="/">Home</Link>
       </Menu.Item>
       <Menu.Item>
-        <a href="/userbookings">Bookings</a>
+        <Link to="/userbookings">Bookings</Link>
       </Menu.Item>
       {user.admin && (
         <Menu.Item>
-          <a href="/admin">Admin Panel</a>
+          <Link to="/admin">Admin Panel</Link>
         </Menu.Item>
       )}
       <Menu.Item
@@ -64,9 +64,9 @@ function DefaultLayout(props) {
               </div>
             </Link>
             <div className="nav-links" style={{ display: 'flex'}}>
-            <a href="/services" style={styles.navLink}>Our Services</a>
-            <a href="/contact" style={styles.navLink}>Contact Us</a>
-            <a href="/about" style={styles.navLink}>About Us</a>
+            <Link to="/services" style={styles.navLink}>Our Services</Link>
+            <Link to="/contact" style={styles.navLink}>Contact Us</Link>
+            <Link to="/about" style={styles.navLink}>About Us</Link>
           </div>
           </div>
 

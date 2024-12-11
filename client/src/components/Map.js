@@ -34,8 +34,8 @@ const Map = () => {
       >
         <Marker latitude={31.519208} longitude={74.319163}>
           <div className="marker">
-            <a
-              href="https://www.google.com/maps/place/Abrar+Center+wahdat+road+Muslim+town+lahore/@31.5192115,74.317498,17z/data=!4m5!3m4!1s0x391905d80a35cfb3:0x5e6fb4fe9f3d7055!8m2!3d31.5192555!4d74.3192881"
+            <Link
+              to="https://www.google.com/maps/place/Abrar+Center+wahdat+road+Muslim+town+lahore/@31.5192115,74.317498,17z/data=!4m5!3m4!1s0x391905d80a35cfb3:0x5e6fb4fe9f3d7055!8m2!3d31.5192555!4d74.3192881"
               target="_blank"
             >
               <img
@@ -43,7 +43,7 @@ const Map = () => {
                 alt="Our Location"
                 style={{ height: "50px", width: "48px" }}
               />
-            </a>
+            </Link>
           </div>
         </Marker>
       </ReactMapGL>

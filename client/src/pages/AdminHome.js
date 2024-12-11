@@ -34,7 +34,7 @@ function AdminHome() {
                 Admin Panel
               </h3>
               <button className="btnAdd">
-                <a href="/addcar">ADD CAR</a>
+                <Link to="/addcar">ADD CAR</Link>
               </button>
             </div>
           </Col>

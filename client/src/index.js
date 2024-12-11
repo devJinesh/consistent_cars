@@ -5,11 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";  // Import BrowserRouter
 import Chatwidget from "./components/Chatwidget";
+
 ReactDOM.render(
   <Provider store={store}>
-    <App />
-    <Chatwidget />
+    <BrowserRouter>  {/* Wrap your app with BrowserRouter */}
+      <App />
+      <Chatwidget />
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );

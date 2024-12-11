@@ -8,6 +8,10 @@ const app = express();
 
 // Database connection
 const dbConnection = require("./Db/db");
+dbConnection.on('error', console.error.bind(console, 'MongoDB connection error:'));
+dbConnection.once('open', () => {
+  console.log('Database connected');
+});
 
 // Middleware
 app.use(express.json());
@@ -23,15 +27,12 @@ app.use(function(req, res, next) {
 });
 
 // Routes
-app.use("/api/cars/", require("./Routes/carsRoutes"));
-app.use("/booking/api/cars/", require("./Routes/carsRoutes"));
-app.use("/editcar/api/cars/", require("./Routes/carsRoutes"));
-app.use("/api/users/", require("./Routes/usersRoutes"));
-app.use("/booking/api/bookings/", require("./Routes/bookingsRoute"));
-app.use("/api/bookings/", require("./Routes/bookingsRoute"));
+app.use("/api/cars", require("./Routes/carsRoutes"));
+app.use("/api/users", require("./Routes/usersRoutes"));
+app.use("/api/bookings", require("./Routes/bookingsRoute"));
 
 // Start server
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
-  console.log(`Server is running at port: ${port} `);
+  console.log(`Server is running at port: ${port}`);
 });

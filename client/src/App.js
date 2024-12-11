@@ -12,6 +12,7 @@ import AdminHome from "./pages/AdminHome";
 import About from "./pages/About";
 import Service from "./pages/Service";
 import Contact from "./components/Contact";
+import BookService from "./pages/BookService";
 
 function App() {
   return (
@@ -119,6 +120,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <Service />
+              </ProtectedRoute>
+            }
+          ></Route>
+          <Route
+            path="/bookservice"
+            exact
+            element={
+              <ProtectedRoute>
+                <BookService />
               </ProtectedRoute>
             }
           ></Route>

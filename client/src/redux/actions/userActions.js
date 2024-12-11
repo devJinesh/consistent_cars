@@ -5,7 +5,7 @@ export const userLogin = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    const response = await axios.post("https://consistent-cars.onrender.com/api/users/login", reqObj);
+    const response = await axios.post("http://localhost:8000/api/users/login", reqObj);
     const { admin, username, _id } = response.data;
     localStorage.setItem("user", JSON.stringify({ admin, username, _id }));
     message.success("Login success");
@@ -24,7 +24,7 @@ export const userRegister = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    const response = await axios.post("https://consistent-cars.onrender.com/api/users/register", reqObj);
+    const response = await axios.post("http://localhost:8000/api/users/register", reqObj);
     message.success("Registration successfull");
     setTimeout(() => {
       window.location.href = "/login";

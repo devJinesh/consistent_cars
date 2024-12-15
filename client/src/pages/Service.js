@@ -69,7 +69,7 @@ function Service() {
                 <div className="text-left pl-2">
                   <p>{service.name}</p>
                   <p style={{ fontSize: "12px", color: "red" }}>
-                    {service.name === "Airport Drop" ? "*Min 12 hrs of booking required." : "*Daily limit 250 kms."}
+                    {service.name === "Airport Drop" ? "*Min 5 hrs of booking required." : "*Daily limit 300 kms."}
                   </p>
                 </div>
               </div>
@@ -108,11 +108,11 @@ function Service() {
                           {(() => {
                             switch (car.name) {
                               case "Toyota Innova":
-                                return "*Rs 20 per km beyond daily limit.";
+                                return "*Rs 22 per km beyond daily limit.";
                               case "Toyota Etios":
-                                return "*Rs 12 per km beyond daily limit.";
+                                return "*Rs 14 per km beyond daily limit.";
                               case "Swift DZire":
-                                return "*Rs 10 per km beyond daily limit.";
+                                return "*Rs 14 per km beyond daily limit.";
                               default:
                                 return "";
                             }

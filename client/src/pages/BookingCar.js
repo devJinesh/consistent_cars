@@ -43,6 +43,9 @@ function BookingCar() {
   useEffect(() => {
     if (car.rentPerHour) {
       let calculatedAmount = (totalMins * car.rentPerHour) / 60; // Calculate exact per-minute rent
+      if (driver) {
+        calculatedAmount = (calculatedAmount + totalMins * (300/1440))
+      }
       // Round the amount to the nearest multiple of 5
       calculatedAmount = Math.round(calculatedAmount / 5) * 5;
       setTotalAmount(calculatedAmount);

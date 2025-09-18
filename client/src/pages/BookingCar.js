@@ -64,7 +64,7 @@ function BookingCar() {
 
   function handlePayment() {
     const options = {
-      key: "rzp_live_0e95CHFRJ2E9Kp", // Replace with your Razorpay key
+      key: process.env.REACT_APP_RAZORPAY_KEY_ID, // Replace with your Razorpay key
       amount: totalAmount * 100, // Amount in paise
       currency: "INR",
       name: "Consistent Cars",

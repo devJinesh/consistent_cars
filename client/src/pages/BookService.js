@@ -54,7 +54,7 @@ function BookService() {
 
   function handlePayment() {
     const options = {
-      key: process.env.RAZORPAY_KEY_ID,
+      key: process.env.REACT_APP_RAZORPAY_KEY_ID,
       amount: totalAmount * 100, // Amount in paise
       currency: "INR",
       name: "Consistent Cars",
